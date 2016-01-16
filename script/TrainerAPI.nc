@@ -185,6 +185,7 @@ class Function {
         api.fCounter++;
     }  
     
+    // Not working correctly!
     void Function(TrainerAPI ref fapi, Dialog ref dlg, char[] fname, char[] ffind, char[] freplace){
         api = fapi;
         name = fname;
@@ -222,6 +223,7 @@ class Function {
         api.fCounter++;
     }  
     
+    // Not working correctly!
     void Function(Licence ref flicence, TrainerAPI ref fapi, Dialog ref dlg, char[] fname, char[] ffind, char[] freplace){
         api = fapi;
         name = fname;
