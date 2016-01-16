@@ -65,7 +65,7 @@ class TrainerAPI {
         site = gsite;
     }
 
-    void AddMainDialog(int x, int y, int width, int height, DialogEventCallBack onClose, bool showAuthor, bool showSite){
+    void CreateMainDialog(int x, int y, int width, int height, DialogEventCallBack onClose, bool showAuthor, bool showSite){
         char[] caption = trainerName + " v" + trainerVer;
         char[] copyright = trainerName;
         if(showAuthor) copyright += " by " + author;
@@ -73,9 +73,9 @@ class TrainerAPI {
         mainDlg.AddHyperLink("TrainerAPI " + apiVer, "https://github.com/WGOS/TrainerAPI", 5, height - 45, 78, 15);
         mainDlg.AddStatic("|", 88, height - 45, 2, 15);
         if(showSite){
-            mainDlg.AddHyperLink(copyright, site, 95, height - 45, 1000, 15);
+            mainDlg.AddHyperLink(copyright, site, 95, height - 45, copyright.size*10, 15);
         }else{
-            mainDlg.AddStatic(copyright, 95, height - 45, 1000, 15);
+            mainDlg.AddStatic(copyright, 95, height - 45, copyright.size*10, 15);
         }
         maxFxVertical = (height-45)/20;
         newX = 3;
@@ -177,7 +177,7 @@ class Function {
         name = fname;
         find = ffind;
         replace = freplace;
-        int newFxW = fname.size * 7;
+        int newFxW = fname.size * 8;
         if(api.maxFxSizeX < newFxW) api.maxFxSizeX = newFxW;
         if(api.fCounter >= api.maxFxVertical){
             api.newX = api.newX + api.maxFxSizeX;
@@ -195,7 +195,7 @@ class Function {
         name = fname;
         find = ffind;
         replace = freplace;
-        int newFxW = fname.size * 7;
+        int newFxW = fname.size * 8;
         if(api.maxFxSizeX < newFxW) api.maxFxSizeX = newFxW;
         if(api.fCounter >= api.maxFxVertical){
             api.newX = api.newX + api.maxFxSizeX;
@@ -214,7 +214,7 @@ class Function {
         find = ffind;
         replace = freplace;
         licence = flicence;
-        int newFxW = fname.size * 7;
+        int newFxW = fname.size * 8;
         if(api.maxFxSizeX < newFxW) api.maxFxSizeX = newFxW;
         if(api.fCounter >= api.maxFxVertical){
             api.newX = api.newX + api.maxFxSizeX;
@@ -233,7 +233,7 @@ class Function {
         find = ffind;
         replace = freplace;
         licence = flicence;
-        int newFxW = fname.size * 7;
+        int newFxW = fname.size * 8;
         if(api.maxFxSizeX < newFxW) api.maxFxSizeX = newFxW;
         if(api.fCounter >= api.maxFxVertical){
             api.newX = api.newX + api.maxFxSizeX;
