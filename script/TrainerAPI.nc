@@ -42,9 +42,9 @@ class Licence {
 
 class TrainerAPI {
     Licence ref licence;
-    char[] trainerName, trainerVer, author, site, licOwner, licOwnerMail;
+    char[] trainerName, trainerVer, author, site;
     int buildNum, fCounter, maxFxVertical, maxFxHorizontal, maxFxSizeX, newX;
-    bool licenceRq, licOk, notSaveMaxAlign;
+    bool notSaveMaxAlign;
     Dialog ref mainDlg;
     auto[] ref fxArr;
     
@@ -94,17 +94,16 @@ class TrainerAPI {
         CreateDialog(parent, caption, x, y, width, height, onClose);
     }
     
-    Dialog ref AddDialog(char[] caption, int x, int y, int width, int height, DialogEventCallBack onClose, Dialog ref varDlg){
-        varDlg = CreateDialog(caption, x, y, width, height, onClose);
-        return varDlg;
+    Dialog ref AddDialog(char[] caption, int x, int y, int width, int height, DialogEventCallBack onClose){
+        return CreateDialog(caption, x, y, width, height, onClose);
     }
     
-    void AddDialog(HWND parent, char[] caption, int x, int y, int width, int height, DialogEventCallBack onClose, Dialog ref varDlg){
-        varDlg = CreateDialog(parent, caption, x, y, width, height, onClose);
+    Dialog ref AddDialog(HWND parent, char[] caption, int x, int y, int width, int height, DialogEventCallBack onClose){
+        return CreateDialog(parent, caption, x, y, width, height, onClose);
     }
     
-    void AddDialog(Dialog ref parent, char[] caption, int x, int y, int width, int height, DialogEventCallBack onClose, Dialog ref varDlg){
-        varDlg = CreateDialog(parent, caption, x, y, width, height, onClose);
+    Dialog ref AddDialog(Dialog ref parent, char[] caption, int x, int y, int width, int height, DialogEventCallBack onClose){
+        return CreateDialog(parent, caption, x, y, width, height, onClose);
     }
     
     void ShowMainDialog(){
@@ -127,10 +126,6 @@ class TrainerAPI {
     
     void ShowDialog(HWND dlg, bool view){
         dlg.Show(view);
-    }
-    
-    void WaitClose(Dialog ref dlg){
-        dlg.WaitClose();
     }
     
     HWND GetDialogHWND(char[] caption){
