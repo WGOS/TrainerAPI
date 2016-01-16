@@ -1,0 +1,30 @@
+===========================================================================================================================
+=====================================FlashEx_Client - Advanced Flash Player for online games.==============================
+===========================================================================================================================
+
+Main defferences from browser:
+  All passwords ".\Cache\IE\Macromedia\Flash Player\" and ".\Cache\IE\Adobe\Flash Player\"
+  that's mean your password is in more safety, because common viruses are don't know where FlashEx stored.
+
+  Also here's cache feature. All resources stored at ".\Cache", and could be replaced by your own. For success, path of your resorce must be the same with original,
+  example: ".\Cache\s.tankionline.com\resources\0\114\136\215\15\map.xml" for map "Silence". Then client will load map from client, not server.
+  If resources are in cache, you will have big speedup logging to games.
+
+  Fast access to server menu. You can join to full server.
+
+  Portable.
+
+  Ability to play using gamepad/joystic. Hotkeys w/ Fn button.
+
+  F11 - turn on fullscreen
+
+ `~` - hotkeys that makes screenshot. (.\screenshot\)
+
+  Feature of vide capturing (.\screenshot\)  (Ctrl + `~` is hotkey)
+
+  By replace Flash.ocx, you could upgrade Flash Player to actual version
+
+  Plugin-based structure. You able to make your own build of client.
+
+  Built-in socks (socks proxy 4/5).
+
